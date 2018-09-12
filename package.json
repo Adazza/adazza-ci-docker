@@ -1,0 +1,13 @@
+{
+  "name": "adazza-ci-docker",
+  "version": "0.0.0",
+  "description": "CI container images",
+  "main": "index.js",
+  "repository": "git@github.com:Adazza/adazza-ci-docker.git",
+  "author": "Adazza",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "3.3.0"
+  }
+}
