@@ -1,4 +1,4 @@
-# adazza-ci-docker
+# adazza-ci-docker ![build status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoid1hzeUMrQ0FQSlJVcjY5WG5HdWRlUzZNRWx1WWlMTXhleEJsMUlHbUpOUFdiWm4rVmN5alZOekVnKys2QTRqZ0pROXRCeGFJbGpqYmE0K1g3ZGxrOHlZPSIsIml2UGFyYW1ldGVyU3BlYyI6InMwTUR6VC94VWplQm5aRkwiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 Dockerfiles for CI/CD container images
 
 ## Registry
