@@ -3,10 +3,7 @@ version: 0.2
 env:
     variables:
         AWS_ACCOUNT_ID: '239844027862'
-        AWS_DEFAULT_REGION: us-east-1
         IMAGE_REPO_NAME: adazza-ci-ecr
-    # parameter-store:
-    #   LOGIN_PASSWORD: "dockerLoginPassword"
 
 phases:
     install:
