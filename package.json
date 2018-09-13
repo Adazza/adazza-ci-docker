@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "pre_build": "lerna exec -- docker pull \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME || true",
+    "pre_build": "lerna exec -- docker pull \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME || echo 'New image'",
     "build": "run-s build:build build:tag",
     "build:build": "lerna exec -- docker build --cache-from \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME -t \\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME .",
     "build:tag": "lerna exec -- docker tag \\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME",
