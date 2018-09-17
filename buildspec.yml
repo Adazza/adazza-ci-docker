@@ -28,6 +28,7 @@ phases:
         commands:
             - echo Pushing the Docker images
             - yarn run post_build
+
 cache:
     paths:
         - 'node_modules/**/*'
