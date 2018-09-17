@@ -1,5 +1,5 @@
 {
-  "name": "adazza-ci-docker",
+  "name": "scala",
   "version": "0.0.0",
   "description": "",
   "main": "Dockerfile",
