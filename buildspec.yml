@@ -9,7 +9,7 @@ phases:
     install:
         commands:
             - echo Installing node dependencies
-            - yarn install --frozen-lockfile
+            - yarn install --frozen-lockfile --prefer-offline
             # https://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker-custom-image.html
             - echo Starting docker daemon
             - nohup dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay&
@@ -19,15 +19,13 @@ phases:
             - echo Logging in to Amazon ECR
             - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
             - echo Caching existing layers
-            - yarn run pre_build
+            - yarn run pull
     build:
         commands:
             - echo Building the Docker images
             - yarn run build
-    post_build:
-        commands:
-            - echo Pushing the Docker images
-            - yarn run post_build
+            - yarn run tag
+            - yarn run push
 
 cache:
     paths:
