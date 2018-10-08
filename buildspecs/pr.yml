@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+    install:
+        commands:
+            - echo Installing node dependencies
+            - yarn install --frozen-lockfile --prefer-offline
+    build:
+        commands:
+            - echo Performing static analysis
+            - yarn run lint
+            - yarn run test
+
+cache:
+    paths:
+        - 'node_modules/**/*'
+        - '~/.cache/yarn'
+        - '/var/lib/docker'

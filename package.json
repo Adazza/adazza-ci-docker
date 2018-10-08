@@ -9,11 +9,14 @@
   "private": true,
   "scripts": {
     "build": "lerna exec -- docker build --cache-from \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME -t \\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME .",
+    "lint": "lerna run lint",
     "pull": "lerna exec -- docker pull \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME || echo 'New image'",
     "push": "lerna exec -- docker push \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME",
-    "tag": "lerna exec -- docker tag \\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME"
+    "tag": "lerna exec -- docker tag \\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME \\$AWS_ACCOUNT_ID.dkr.ecr.\\$AWS_DEFAULT_REGION.amazonaws.com/\\$IMAGE_REPO_NAME:\\$LERNA_PACKAGE_NAME",
+    "test": "lerna run test"
   },
   "devDependencies": {
+    "dockerlint": "0.3.9",
     "lerna": "3.3.0",
     "npm-run-all": "4.1.3"
   }
