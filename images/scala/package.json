@@ -4,7 +4,7 @@
   "description": "",
   "main": "Dockerfile",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "dockerlint -p Dockerfile"
   },
   "author": "spaintrain <mcspainhower+npm@gmail.com>",
   "license": "MIT",
