@@ -2,9 +2,9 @@
   "name": "frontend-web",
   "version": "0.0.0",
   "description": "",
-  "main": "Dockerfil",
+  "main": "Dockerfile",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "dockerlint -p Dockerfile"
   },
   "author": "spaintrain <mcspainhower+npm@gmail.com>",
   "license": "MIT",
