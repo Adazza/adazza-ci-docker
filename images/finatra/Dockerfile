@@ -14,8 +14,6 @@ RUN unzip /tmp/packer.zip -d /usr/local/bin/
 RUN chmod '0755' /usr/local/bin/packer
 RUN rm /tmp/packer.zip
 
-
-# Install OS deps
 RUN mkdir /project
 ENTRYPOINT ["bash"]
 WORKDIR /project
