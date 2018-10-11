@@ -9,9 +9,6 @@ RUN apt-get update
 RUN apt-get install -y apt-transport-https ca-certificates curl software-properties-common awscli
 RUN apt-get install -y openjdk-8-jdk
 
-# Install OS deps
-RUN apt-get update
-
 RUN mkdir /project
 ENTRYPOINT ["bash"]
 WORKDIR /project
