@@ -16,9 +16,10 @@ RUN apt-get install -y apt-transport-https ca-certificates curl software-propert
 RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y postgresql-9.6 postgresql-contrib-9.6
 
+RUN update-rc.d postgresql enable
+
 USER postgres
-RUN service postgresql start &&\
-    psql --command "CREATE USER adazza WITH SUPERUSER PASSWORD 'adazza';"
+RUN service postgresql start && psql --command "CREATE USER adazza_test_user WITH SUPERUSER PASSWORD 'adazza_test_user';"
 RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.6/main/pg_hba.conf
 RUN echo "listen_addresses='*'" >> /etc/postgresql/9.6/main/postgresql.conf
 
