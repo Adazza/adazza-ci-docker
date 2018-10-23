@@ -34,4 +34,4 @@ cache:
     paths:
         - 'node_modules/**/*'
         - '~/.cache/yarn'
-        - '/codebuild/output/docker/**/*'
+        # - '/codebuild/output/docker/**/*' # Uploading takes forever, re-add when AWS fixes
