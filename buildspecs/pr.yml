@@ -27,8 +27,6 @@ phases:
             - yarn run pull
     build:
         commands:
-            - df -ah
-            - du -d1 -h /var/lib/docker/containers | sort -h
             - echo Building the Docker images
             - yarn run build
 
