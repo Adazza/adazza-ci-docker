@@ -34,4 +34,4 @@ cache:
     paths:
         - 'node_modules/**/*'
         - '~/.cache/yarn'
-        - '/var/lib/docker'
+        - '/codebuild/output/docker/**/*'
