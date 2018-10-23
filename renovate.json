@@ -12,5 +12,6 @@
     }
   ],
   "pinVersions": true,
-  "prHourlyLimit": 15
+  "prHourlyLimit": 15,
+  "reviewers": ["SpainTrain"]
 }
