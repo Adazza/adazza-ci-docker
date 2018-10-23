@@ -26,6 +26,7 @@ phases:
             - yarn run pull
     build:
         commands:
+            - df -ah
             - echo Building the Docker images
             - yarn run build
 
