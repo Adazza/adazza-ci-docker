@@ -36,4 +36,4 @@ cache:
     paths:
         - 'node_modules/**/*'
         - '~/.cache/yarn'
-        - '/codebuild/output/docker/**/*'
+        # - '/codebuild/output/docker/**/*' # Too slow, try again if AWS fixes cache upload speed
