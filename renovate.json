@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "labels": ["dependencies", "renovate"],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "^@adazza/.*"
+      ],
+      "pinVersions": false
+    }
+  ],
+  "pinVersions": true,
+  "prHourlyLimit": 10,
+  "reviewers": ["SpainTrain"]
+}

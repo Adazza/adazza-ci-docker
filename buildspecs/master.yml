@@ -12,7 +12,8 @@ phases:
             - yarn install --frozen-lockfile --prefer-offline
             # https://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker-custom-image.html
             - echo Starting docker daemon
-            - nohup dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay&
+            - mkdir -p /codebuild/output/docker
+            - nohup dockerd -g /codebuild/output/docker --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay&
             - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
     pre_build:
         commands:
@@ -35,4 +36,4 @@ cache:
     paths:
         - 'node_modules/**/*'
         - '~/.cache/yarn'
-        - '/var/lib/docker'
+        - '/codebuild/output/docker/**/*'
