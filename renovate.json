@@ -1,17 +1,10 @@
 {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
   "labels": ["dependencies", "renovate"],
   "packageRules": [
-    {
-      "packagePatterns": [
-        "^@adazza/.*"
-      ],
-      "pinVersions": false
-    }
+    { "packagePatterns": ["^@adazza/.*"], "rangeStrategy": "replace" }
   ],
-  "pinVersions": true,
   "prHourlyLimit": 10,
-  "reviewers": ["SpainTrain"]
+  "reviewers": ["SpainTrain"],
+  "rangeStrategy": "pin"
 }
