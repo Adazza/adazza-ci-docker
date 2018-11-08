@@ -1,4 +1,4 @@
-# adazza-ci-docker [![build status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoid1hzeUMrQ0FQSlJVcjY5WG5HdWRlUzZNRWx1WWlMTXhleEJsMUlHbUpOUFdiWm4rVmN5alZOekVnKys2QTRqZ0pROXRCeGFJbGpqYmE0K1g3ZGxrOHlZPSIsIml2UGFyYW1ldGVyU3BlYyI6InMwTUR6VC94VWplQm5aRkwiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://console.aws.amazon.com/codebuild/home?region=us-east-1#/projects/adazza-ci-docker/view) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+# adazza-ci-docker [![build status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoid1hzeUMrQ0FQSlJVcjY5WG5HdWRlUzZNRWx1WWlMTXhleEJsMUlHbUpOUFdiWm4rVmN5alZOekVnKys2QTRqZ0pROXRCeGFJbGpqYmE0K1g3ZGxrOHlZPSIsIml2UGFyYW1ldGVyU3BlYyI6InMwTUR6VC94VWplQm5aRkwiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://console.aws.amazon.com/codesuite/codebuild/projects/adazza-ci-docker/history?region=us-east-1) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 
 Dockerfiles for CI/CD container images
