@@ -1,7 +1,7 @@
 {
-  "name": "frontend-web",
+  "name": "renovate-runner",
   "version": "0.0.0",
-  "description": "",
+  "description": "Container image to run renovate dep updater",
   "main": "Dockerfile",
   "scripts": {
     "lint": "dockerlint -p Dockerfile"
@@ -12,9 +12,10 @@
     "yarn": "1.12.1"
   },
   "devDependencies": {
-    "n": "2.1.12"
+    "n": "2.1.12",
+    "renovate": "13.122.4"
   },
-  "author": "spaintrain <mcspainhower+npm@gmail.com>",
+  "author": "Adazza",
   "license": "MIT",
   "private": true
 }

@@ -6,7 +6,15 @@
   "scripts": {
     "lint": "dockerlint -p Dockerfile"
   },
-  "author": "spaintrain <mcspainhower+npm@gmail.com>",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1",
+    "yarn": "1.12.1"
+  },
+  "devDependencies": {
+    "n": "2.1.12"
+  },
+  "author": "Adazza",
   "license": "MIT",
   "private": true
 }
