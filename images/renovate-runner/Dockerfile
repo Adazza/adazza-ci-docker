@@ -7,7 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update
 RUN apt-get install -y nodejs awscli
-RUN npm i -g npm@'~6.4.1' yarn@'1.12.3' n@'2.1.12' renovate@'13.122.4'
+RUN npm i -g npm@'~6.4.1' yarn@'1.12.3' n@'2.1.12' renovate@'13.128.0'
 
 RUN n 10.13.0
 
