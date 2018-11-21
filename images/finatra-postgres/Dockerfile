@@ -15,6 +15,12 @@ RUN apt-get update
 RUN apt-get install -y apt-transport-https ca-certificates curl software-properties-common awscli
 RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y postgresql-9.6 postgresql-contrib-9.6
+RUN apt-get install -y unzip
+
+RUN wget --quiet https://releases.hashicorp.com/packer/1.3.2/packer_1.3.2_linux_amd64.zip -O /tmp/packer.zip
+RUN unzip /tmp/packer.zip -d /usr/local/bin/
+RUN chmod '0755' /usr/local/bin/packer
+RUN rm /tmp/packer.zip
 
 RUN update-rc.d postgresql enable
 
