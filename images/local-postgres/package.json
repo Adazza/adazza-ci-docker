@@ -1,0 +1,12 @@
+{
+  "name": "local-postgres",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Dockerfile",
+  "scripts": {
+    "lint": "dockerlint -p Dockerfile"
+  },
+  "author": "ben@adazza.com",
+  "license": "MIT",
+  "private": true
+}
