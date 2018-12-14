@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install -y nodejs awscli
 RUN npm i -g npm@'~6.4.1' yarn@'1.12.3' n@'2.1.12'
 
-RUN n 10.14.1
+RUN n 10.14.2
 
 RUN mkdir /project
 ENTRYPOINT ["bash"]
