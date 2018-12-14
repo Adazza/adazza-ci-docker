@@ -7,7 +7,7 @@
     "lint": "dockerlint -p Dockerfile"
   },
   "engines": {
-    "node": "10.14.1",
+    "node": "10.14.2",
     "npm": "6.5.0",
     "yarn": "1.12.3"
   },
