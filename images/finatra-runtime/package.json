@@ -1,0 +1,12 @@
+{
+  "name": "finatra-runtime",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Dockerfile",
+  "scripts": {
+    "lint": "dockerlint -p Dockerfile"
+  },
+  "author": "Ben McNiel <ben@adazza.com>",
+  "license": "MIT",
+  "private": true
+}
