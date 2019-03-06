@@ -1,0 +1,20 @@
+{
+  "name": "cdk-apps",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Dockerfile",
+  "scripts": {
+    "lint": "dockerlint -p Dockerfile"
+  },
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.8.0",
+    "yarn": "1.13.0"
+  },
+  "devDependencies": {
+    "n": "2.1.12"
+  },
+  "author": "Adazza",
+  "license": "MIT",
+  "private": true
+}
