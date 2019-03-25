@@ -17,9 +17,12 @@ RUN curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc  | apt-key add
 # Node prereq
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
-# Install OS deps
+# Postgres repo
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
+RUN curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc  | apt-key add -
+
+# Run Update after settting up required repositories.
 RUN apt-get update
-RUN apt-get install -y nodejs docker-ce awscli
 
 RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y postgresql-9.6 postgresql-contrib-9.6
@@ -32,6 +35,8 @@ RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.6/main/pg_hba.co
 RUN echo "listen_addresses='*'" >> /etc/postgresql/9.6/main/postgresql.conf
 
 USER root
+
+RUN apt-get install -y nodejs docker-ce awscli
 
 # Versioned deps
 RUN npm i -g npm@'~6.9.0' yarn@'1.13.0' n@'2.1.12'
