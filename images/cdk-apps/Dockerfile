@@ -13,6 +13,10 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubunt
 # Node prereq
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
+# Postgres repo
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
+RUN curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc  | apt-key add -
+
 # Install OS deps
 RUN apt-get update
 RUN apt-get install -y nodejs docker-ce awscli
@@ -20,6 +24,18 @@ RUN apt-get install -y nodejs docker-ce awscli
 # Versioned deps
 RUN npm i -g npm@'~6.9.0' yarn@'1.13.0' n@'2.1.12'
 RUN n 10.15.3
+
+RUN apt-get install -y openjdk-8-jdk
+RUN apt-get install -y postgresql-9.6 postgresql-contrib-9.6
+
+RUN update-rc.d postgresql enable
+
+USER postgres
+RUN service postgresql start && psql --command "CREATE USER adazza_test_user WITH SUPERUSER PASSWORD 'adazza_test_user';"
+RUN echo "host all  all    0.0.0.0/0  md5" >> /etc/postgresql/9.6/main/pg_hba.conf
+RUN echo "listen_addresses='*'" >> /etc/postgresql/9.6/main/postgresql.conf
+
+USER root
 
 RUN mkdir /project
 ENTRYPOINT ["bash"]
