@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "n": "3.0.2",
-    "renovate": "14.37.0"
+    "renovate": "14.59.4"
   },
   "author": "Adazza",
   "license": "MIT",
