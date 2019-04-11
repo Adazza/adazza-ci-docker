@@ -1,9 +1,9 @@
 {
   "extends": ["config:base"],
   "labels": ["dependencies", "renovate"],
-  "lockFileMaintenance": true,
+  "lockFileMaintenance": {"enabled": true},
   "packageRules": [
-    { "packagePatterns": ["^@adazza/.*"], "rangeStrategy": "replace" }
+    {"packagePatterns": ["^@adazza/.*"], "rangeStrategy": "replace"}
   ],
   "prHourlyLimit": 10,
   "reviewers": ["SpainTrain"],
