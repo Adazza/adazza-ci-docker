@@ -12,7 +12,7 @@
     "yarn": "1.15.2"
   },
   "devDependencies": {
-    "n": "2.1.12",
+    "n": "3.0.2",
     "renovate": "14.37.0"
   },
   "author": "Adazza",
