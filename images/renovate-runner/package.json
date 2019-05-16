@@ -12,8 +12,8 @@
     "yarn": "1.16.0"
   },
   "devDependencies": {
-    "n": "3.0.2",
-    "renovate": "16.10.3"
+    "n": "4.1.0",
+    "renovate": "17.6.4"
   },
   "author": "Adazza",
   "license": "MIT",
