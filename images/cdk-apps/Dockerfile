@@ -39,7 +39,7 @@ USER root
 RUN apt-get install -y nodejs docker-ce awscli
 
 # Versioned deps
-RUN npm i -g npm@'~6.9.0' yarn@'1.15.2' n@'4.1.0'
+RUN npm i -g npm@'~6.9.0' yarn@'1.16.0' n@'4.1.0'
 RUN n 10.15.3
 
 RUN mkdir /project
