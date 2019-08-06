@@ -12,7 +12,7 @@
     "yarn": "1.16.0"
   },
   "devDependencies": {
-    "n": "4.1.0"
+    "n": "5.0.2"
   },
   "author": "Adazza",
   "license": "MIT",
